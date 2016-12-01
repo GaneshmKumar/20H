@@ -25,9 +25,11 @@ This app let you to manage the learning task for 20 Hours
 ``20H -l old_task_name``
 
 ## Example ##
-``20H -n learn angular js``
+``20H -n learn_angular_js``
 
-``20H -l learn node js``
+``20H -l learn_node_js``
+
+** If the task name has more than one word, you can separate them by '_' or '-' **
 
 ## Uninstall ##
 To uninstall 20H, execute the following line in your terminal
