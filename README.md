@@ -26,6 +26,7 @@ This app let you to manage the learning task for 20 Hours
 
 ## Example ##
 ``20H -n learn angular js``
+
 ``20H -l learn node js``
 
 ## Uninstall ##
