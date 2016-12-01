@@ -29,7 +29,7 @@ This app let you to manage the learning task for 20 Hours
 
 ``20H -l learn_node_js``
 
-** If the task name has more than one word, you can separate them by '_' or '-' **
+**If the task name has more than one word, you can separate them by '_' or '-'**
 
 ## Uninstall ##
 To uninstall 20H, execute the following line in your terminal
