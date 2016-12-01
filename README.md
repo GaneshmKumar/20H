@@ -15,7 +15,7 @@ This app let you to manage the learning task for 20 Hours
 [Make sure you are using python2]
 
 ## Usage ##
-### To view all your taska ###
+### To view all your tasks ###
 ``20H -d``
 
 ### To add new task ###
