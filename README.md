@@ -37,4 +37,4 @@ To uninstall 20H, execute the following line in your terminal
 ``sudo rm -rf /usr/local/bin/20H``
 
 
-**NOTE:** Works on Linux only.
+**NOTE:** Works on Linux and Windows (termcolor doesn't work in Windows).

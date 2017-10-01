@@ -3,12 +3,17 @@ import time
 import os
 import json
 import getpass
+import platform
 from termcolor import colored
 
 
+platform = platform.system()
 def cls():
-	os.system('clear')
-
+	if platform == 'Linux':
+		os.system('clear')
+	elif platform == 'Windows':
+		os.system('cls')
+		
 def read_file(file_name):
 	with open(file_name, 'r') as json_file:
 		return json.load(json_file)
@@ -100,12 +105,12 @@ def initial_screen():
 	cls()
 	print colored("Press CTRL+C to Pause and Press C to Continue", 'cyan')
 
-def createJSON():
-	user = getpass.getuser()
-	json_path = '/home/'+user+'/20H/task.json'
-	if not os.path.exists(json_path):
-		os.system('mkdir /home/'+user+'/20H')
-		with open(json_path, 'w') as json_file:
+def createJSON(task_json, task_folder):
+	'''user = getpass.getuser()
+	json_path = '/home/'+user+'/20H/task.json'''
+	if not os.path.exists(task_json):
+		os.system('mkdir ' + task_folder)
+		with open(task_json, 'w') as json_file:
 			json.dump({}, json_file)
 
 def main():
@@ -143,6 +148,11 @@ def main():
 		print colored("Press CTRL+C to Pause and Press C to Continue", 'cyan')
 		twenty_hours(hms[0], hms[1], hms[2], task)
 
-task_json = '/home/' + getpass.getuser() + '/20H/task.json'
-createJSON()
+if platform == 'Linux':
+	task_folder =  '/home/' + getpass.getuser() + '/20H'
+	task_json = task_folder + '/task.json'
+elif platform == 'Windows':
+	task_folder = 'C:\\Users\\' + getpass.getuser() + '\\20H'
+	task_json = task_folder + '/task.json'
+createJSON(task_json, task_folder)
 #main()
